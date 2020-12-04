@@ -2640,3 +2640,22 @@ class MyriadcoinTestnet(Myriadcoin):
     WIF_BYTE = bytes.fromhex("ef")
     GENESIS_HASH = ('0000017ce2a79c8bddafbbe47c004aa9'
                     '2b20678c354b34085f62b762084b9788')
+
+class Lkrcoin(ScryptMixin, Coin):
+    NAME = "Lkrcoin"
+    SHORTNAME = "LKR"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488B21E")
+    XPRV_VERBYTES = bytes.fromhex("0488ADE4")
+    P2PKH_VERBYTE = bytes.fromhex("30")
+    P2SH_VERBYTES = [bytes.fromhex("55")]
+    WIF_BYTE = bytes.fromhex("80")
+    GENESIS_HASH = ('00000465d42d5005d9f7854c46d1efdd'
+                    '89b4dc54e45c1f57260d3d43bd278c1c')
+    TX_COUNT = 8908766
+    TX_COUNT_HEIGHT = 1105256
+    TX_PER_BLOCK = 10
+    RPC_PORT = 34958
+    REORG_LIMIT = 800
+    PEERS = []
+    DAEMON = daemon.LegacyRPCDaemon
